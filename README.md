@@ -17,3 +17,7 @@ Uma plataforma abrangente para gamers encontrarem seus jogos favoritos. Explore 
 Obrigado a Alura por proporcionar essa imersão dev e a FIAP por ter me recomendado. 
 
 **Explore o Catálogo de Jogos e encontre seus próximos games favoritos!**
+
+## Imagens do Projeto
+
+![Screenshot_1](https://github.com/user-attachments/assets/a95ebd95-1fba-4411-a83a-ac4fa664ec13)
