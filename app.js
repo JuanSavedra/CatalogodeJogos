@@ -1,19 +1,20 @@
 function Search() {
     let section = document.getElementById("resultados-pesquisa");
     let searchField = document.getElementById("campo-pesquisa").value;
+    
+    if (!searchField) {
+        section.innerHTML = `
+        <p>Lamentamos, não há nenhum resultado disponível.<p>
+        `
+        return;
+    }
+    
     searchField = searchField.toLowerCase();
-
+    
     let results = "";
     let name = "";
     let description = "";
     let tags = "";
-
-    if (!searchField) {
-        section.innerHTML = `
-            <p>Lamentamos, não há nenhum resultado disponível.<p>
-        `
-        return;
-    }
 
     for (let data of datas) {
         name = data.name.toLowerCase();
@@ -30,13 +31,13 @@ function Search() {
                 <a href="${data.gameOnSteam}" target="_blank">Jogo na Steam</a>
             </div>
         `;
-        } 
-        
-        if (!results) {
-            results = `
-                <p>Lamentamos, não há nenhum resultado disponível.<p>
-            `
         }
+    }
+
+    if (!results) {
+        results = `
+            <p>Lamentamos, não há nenhum resultado disponível.<p>
+        `
     }
 
     section.innerHTML = results;
